@@ -218,7 +218,9 @@ acc4 = interp1(t_down-t_down(1),acc4,timestamp4);
 % robot connection
 Simulink.importExternalCTypes(which('kortex_wrapper_data.h'));
 gen3Kinova = kortex;
-gen3Kinova.ip_address = '192.168.1.10';
+gen3Kinova.ip_address = '192.168.50.2';
+gen3Kinova.user= 'SSE_Student';
+gen3Kinova.password = 'KinovaG3';
  
 isOk = gen3Kinova.CreateRobotApisWrapper();
 if isOk
